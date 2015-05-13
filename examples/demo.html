@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>aREST.js Demo</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/Foliotek/AjaxQ/master/ajaxq.js"></script>
+	<script type="text/javascript" src="../arest.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+
+<div class='container'>
+
+<h1>aREST.js Demo</h1>
+
+<div class='row'>
+  <div class="col-md-2">
+    <button id='on' class='btn btn-primary btn-block' type="button">On</button>
+  </div>
+  
+  <div class="col-md-2">
+  	<button id='off' class='btn btn-danger btn-block' type="button">Off</button>
+  </div>
+  
+</div>
+
+<div class='row'>
+  <div class="col-md-4">
+    <input id='slider' type="range" value="0" max="255" min="0" step="5">
+  </div>
+</div>
+
+<div class='row'>
+
+  <div class="col-md-2">Analog pin 0: 
+    <span id='analog'></span>
+  </div>
+
+  <div class="col-md-2">Digital pin 2: 
+    <span id='digital'></span>
+  </div>
+</div>
+
+<div class='row'>
+
+  <div class="col-md-2">Temperature: 
+    <span id='temperature'></span>
+  </div>
+
+  <div class="col-md-2">Humidity: 
+    <span id='humidity'></span>
+  </div>
+</div>
+
+</div>
+ 
+</body>
+</html>
