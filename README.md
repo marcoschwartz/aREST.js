@@ -4,10 +4,10 @@ aREST.js is a JavaScript library that was made to easily control your projects r
 
 ## Installation
 
-You can simply embed aREST.js in an HTML page with:
+You can simply embed aREST.js in an HTML page by including the file from the CDN:
 
-```javascript
-<script type="text/javascript" src="https://cdn.rawgit.com/marcoschwartz/aREST.js/master/arest.js"></script>
+```shell
+https://cdn.rawgit.com/marcoschwartz/aREST.js/master/arest.js
 ```
 
 Note that you also need to include jQuery & AjaxQ.
