@@ -5,3 +5,8 @@ body {
 .row {
   margin-top: 25px;
 }
+
+#slider {
+	margin-top: 7px;
+    vertical-align:middle;
+}

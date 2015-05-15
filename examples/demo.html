@@ -17,6 +17,21 @@
 <h1>aREST.js Demo</h1>
 
 <div class='row'>
+  <div class="col-md-3">
+    Device IP address:
+  </div>
+  <div class="col-md-3">
+    <input id='device_address' type="text" name="fname">
+  </div>
+  <div class="col-md-2">
+    <button id='validate' class='btn btn-primary btn-block' type="button">Validate</button>
+  </div>
+</div>
+
+<div class='row'>
+
+  <div class="col-md-2">Digital pin 6: </div>
+
   <div class="col-md-2">
     <button id='on' class='btn btn-primary btn-block' type="button">On</button>
   </div>
@@ -28,6 +43,8 @@
 </div>
 
 <div class='row'>
+  
+  <div id='label' class="col-md-2">PWM pin 6: </div>
   <div class="col-md-4">
     <input id='slider' type="range" value="0" max="255" min="0" step="5">
   </div>
@@ -35,13 +52,15 @@
 
 <div class='row'>
 
-  <div class="col-md-2">Analog pin 0: 
-    <span id='analog'></span>
+  <div class="col-md-3">Analog pin A0: 
+    <span id='A0'></span>
   </div>
 
-  <div class="col-md-2">Digital pin 2: 
-    <span id='digital'></span>
+
+  <div class="col-md-3">Digital pin 2: 
+    <span id='2'></span>
   </div>
+
 </div>
 
 <div class='row'>

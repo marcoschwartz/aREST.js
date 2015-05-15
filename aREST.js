@@ -7,7 +7,7 @@ function Device(address) {
       url: 'http://' + this.address + '/mode/' + pin + '/o',
       crossDomain: true
     }).done(function(data) {
-      console.log(data);
+      //console.log(data);
     });
   };
 
@@ -16,7 +16,7 @@ function Device(address) {
       url: 'http://' + this.address + '/digital/' + pin + '/' + state,
       crossDomain: true
     }).done(function(data) {
-      console.log(data);
+      //console.log(data);
     });
   };
 
@@ -25,7 +25,7 @@ function Device(address) {
       url: 'http://' + this.address + '/analog/' + pin + '/' + state,
       crossDomain: true
     }).done(function(data) {
-      console.log(data);
+      //console.log(data);
     });
   };
 
@@ -34,7 +34,6 @@ function Device(address) {
       url: 'http://' + this.address + '/analog/' + pin,
       crossDomain: true
     }).done(function(data) {
-      console.log(data);
       callback(data);
     });
   };
@@ -44,7 +43,6 @@ function Device(address) {
       url: 'http://' + this.address + '/digital/' + pin,
       crossDomain: true
     }).done(function(data) {
-      console.log(data);
       callback(data);
     });
   };
@@ -54,7 +52,6 @@ function Device(address) {
       url: 'http://' + this.address + '/' + variable,
       crossDomain: true
     }).done(function(data) {
-      console.log(data);
       callback(data);
     });
   };
@@ -64,7 +61,6 @@ function Device(address) {
       url: 'http://' + this.address + '/' + called_function + '?params=' + parameters,
       crossDomain: true
     }).done(function(data) {
-      console.log(data);
       if (callback != null) {callback(data);}
     });
   };
