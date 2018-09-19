@@ -4,7 +4,7 @@ function Device(address) {
 
   this.pinMode = function(pin, state) {
     $.ajaxq('queue', {
-      url: 'http://' + this.address + '/mode/' + pin + '/o',
+      url: 'http://' + this.address + '/mode/' + pin + '/' + state,
       crossDomain: true
     }).done(function(data) {
       //console.log(data);

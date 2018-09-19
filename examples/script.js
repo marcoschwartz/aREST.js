@@ -6,8 +6,8 @@ $( document ).ready(function() {
     var device = new Device(address);
 
     // Set device pins
-    device.pinMode(6, "OUTPUT");
-    device.pinMode(2, "INPUT");
+    device.pinMode(6, "o");
+    device.pinMode(2, "i");
 
     // Button
     $('#on').click(function() {
