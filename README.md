@@ -40,7 +40,7 @@ Then, inside the script.js file, use this code to create a new aREST device (mod
 var device = new Device("192.168.1.101");
 
 // Set pin 6 to output
-device.pinMode(6, "OUTPUT");
+device.pinMode(6, "o");
 
 // Put set pin 6 to HIGH
 device.digitalWrite(6, 1);
