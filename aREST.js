@@ -1,67 +1,73 @@
 // Device definition
-function Device(address) {
-  this.address = address;
+class Device {
+    constructor(address) {
+        this.address = address;
+    }
 
-  this.pinMode = function(pin, state) {
-    $.ajaxq('queue', {
-      url: 'http://' + this.address + '/mode/' + pin + '/o',
-      crossDomain: true
-    }).done(function(data) {
-      //console.log(data);
-    });
-  };
+    pinMode(pin, state) {
+        $.ajaxq('queue', {
+            url: 'http://' + this.address + '/mode/' + pin + state,
+            crossDomain: true
+        }).done((data) => {
+            //console.log('pinMode', data);
+        });
+    };
 
-  this.digitalWrite = function(pin, state) {
-    $.ajaxq('queue', {
-      url: 'http://' + this.address + '/digital/' + pin + '/' + state,
-      crossDomain: true
-    }).done(function(data) {
-      //console.log(data);
-    });
-  };
+    digitalWrite(pin, state) {
+        $.ajaxq('queue', {
+            url: 'http://' + this.address + '/digital/' + pin + '/' + state,
+            crossDomain: true
+        }).done((data) => {
+            //console.log('digitalWrite', data);
+        });
+    };
 
-  this.analogWrite = function(pin, state) {
-    $.ajaxq('queue', {
-      url: 'http://' + this.address + '/analog/' + pin + '/' + state,
-      crossDomain: true
-    }).done(function(data) {
-      //console.log(data);
-    });
-  };
+    analogWrite(pin, state) {
+        $.ajaxq('queue', {
+            url: 'http://' + this.address + '/analog/' + pin + '/' + state,
+            crossDomain: true
+        }).done((data) => {
+            //console.log(data);
+        });
+    };
 
-  this.analogRead = function(pin, callback) {
-    $.ajaxq('queue', {
-      url: 'http://' + this.address + '/analog/' + pin,
-      crossDomain: true
-    }).done(function(data) {
-      callback(data);
-    });
-  };
+    analogRead(pin, callback) {
+        $.ajaxq('queue', {
+            url: 'http://' + this.address + '/analog/' + pin,
+            crossDomain: true
+        }).done((data) => {
+            callback(data);
+        });
+    };
 
-  this.digitalRead = function(pin, callback) {
-    $.ajaxq('queue', {
-      url: 'http://' + this.address + '/digital/' + pin,
-      crossDomain: true
-    }).done(function(data) {
-      callback(data);
-    });
-  };
+    digitalRead(pin, callback) {
+        $.ajaxq('queue', {
+            url: 'http://' + this.address + '/digital/' + pin,
+            crossDomain: true
+        }).done((data) => {
+            callback(data);
+            //console.log(data);
+        });
+    };
 
-  this.getVariable = function(variable, callback) {
-    $.ajaxq('queue', {
-      url: 'http://' + this.address + '/' + variable,
-      crossDomain: true
-    }).done(function(data) {
-      callback(data);
-    });
-  };
+    getVariable(variable, callback) {
+        $.ajaxq('queue', {
+            url: 'http://' + this.address + '/' + variable,
+            crossDomain: true
+        }).done((data) => {
+            callback(data);
+        });
+    };
 
-  this.callFunction = function(called_function, parameters, callback) {
-    $.ajaxq('queue', {
-      url: 'http://' + this.address + '/' + called_function + '?params=' + parameters,
-      crossDomain: true
-    }).done(function(data) {
-      if (callback != null) {callback(data);}
-    });
-  };
+    callFunction(called_function, parameters, callback) {
+        console.log('call works');
+        $.ajaxq('queue', {
+            url: 'http://' + this.address + '/' + called_function + '?params=' + parameters,
+            crossDomain: true
+        }).done((data) => {
+            if (callback != null) {
+                callback(data);
+            }
+        });
+    };
 }
